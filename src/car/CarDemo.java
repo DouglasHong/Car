@@ -23,14 +23,14 @@ public class CarDemo {
 
             Model[] models = cars[i].getModels();
 
-            System.out.println("This car is by " + cars[i].getManufacturer());
+            System.out.println("This car company is " + cars[i].getManufacturer());
+            System.out.println("And was made in the year(s): ");
             for (int y = 0; y < years.length; y++) {
-
-                System.out.println(
-                        "\t and is made in" + years[y].getYear());
+                System.out.println(years[y].getYear());
             }
+            System.out.println("The model name(s) is (are): ");
             for (int m = 0; m < models.length; m++) {
-                System.out.println(" and the model is " + models[m].getType());
+                System.out.println(models[m].getType());
             }
         }
     }
@@ -43,11 +43,11 @@ public class CarDemo {
 
             car.setManufacturer("Toyota" + i);
             Year[] years = new Year[3];
-            for (int c = 0; c < years.length; c++) {
+            for (int c = 2000; c < years.length + 2000; c++) {
                 Year year = new Year();
                 year.setYear(c);
 
-                years[c] = year;
+                years[c - 2000] = year;
             }
             Model[] models = new Model[4];
             for (int m = 0; m < models.length; m++) {

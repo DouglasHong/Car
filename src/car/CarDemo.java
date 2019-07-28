@@ -23,12 +23,12 @@ public class CarDemo {
 
             Model[] models = cars[i].getModels();
 
-            System.out.println("This car company is " + cars[i].getManufacturer());
+            System.out.println("This car's manufacturer is " + cars[i].getManufacturer());
             System.out.println("And was made in the year(s): ");
             for (int y = 0; y < years.length; y++) {
                 System.out.println(years[y].getYear());
             }
-            System.out.println("The model name(s) is (are): ");
+            System.out.println("The model name(s) is(are): ");
             for (int m = 0; m < models.length; m++) {
                 System.out.println(models[m].getType());
             }

@@ -27,20 +27,20 @@ public class Citation {
 
             ticket = true;
             ticketcost = 100;
-            System.out.println("This ticket will cost " + ticketcost);
+            System.out.println("This ticket will cost $" + ticketcost + ".");
         } else if ((speed.getMph() >= 90) && (speed.getMph() <= 100)) {
             ticket = true;
             ticketcost = 200;
-            System.out.println("This ticket will cost " + ticketcost);
+            System.out.println("This ticket will cost $" + ticketcost + ".");
         } else if ((speed.getMph() >= 100) && (speed.getMph() <= 10000)) {
             ticket = true;
             ticketcost = 300;
-            System.out.println("This ticket will cost " + ticketcost);
+            System.out.println("This ticket will cost $" + ticketcost + ".");
 
         } else {
             ticket = false;
             ticketcost = 0;
-            System.out.println("you don't need a ticket so it costs " + ticketcost);
+            System.out.println("You don't need a ticket so you have to pay $" + ticketcost + ". Nice!");
         }
 
     }

@@ -23,16 +23,16 @@ public class Citation {
     }
 
     public void calculateCitation(Speed speed) {
-        if ((speed.getMph() <= 90) && (speed.getMph() >= 80)) {
+        if ((speed.getMph() < 90) && (speed.getMph() >= 80)) {
 
             ticket = true;
             ticketcost = 100;
             System.out.println("This ticket will cost $" + ticketcost + ".");
-        } else if ((speed.getMph() >= 90) && (speed.getMph() <= 100)) {
+        } else if ((speed.getMph() >= 90) && (speed.getMph() <= 99)) {
             ticket = true;
             ticketcost = 200;
             System.out.println("This ticket will cost $" + ticketcost + ".");
-        } else if ((speed.getMph() >= 100) && (speed.getMph() <= 10000)) {
+        } else if (speed.getMph() >= 100) {
             ticket = true;
             ticketcost = 300;
             System.out.println("This ticket will cost $" + ticketcost + ".");

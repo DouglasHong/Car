@@ -11,11 +11,11 @@ package car2;
  */
 public class Citation {
 
-    private boolean ticket;
+    private boolean getTicket;
     private double ticketcost;
 
     public boolean getTicket() {
-        return ticket;
+        return getTicket;
     }
 
     public double getTicketCost() {
@@ -25,20 +25,20 @@ public class Citation {
     public void calculateCitation(Speed speed) {
         if ((speed.getMph() < 90) && (speed.getMph() >= 80)) {
 
-            ticket = true;
+            getTicket = true;
             ticketcost = 100;
             System.out.println("This ticket will cost $" + ticketcost + ".");
         } else if ((speed.getMph() >= 90) && (speed.getMph() <= 99)) {
-            ticket = true;
+            getTicket = true;
             ticketcost = 200;
             System.out.println("This ticket will cost $" + ticketcost + ".");
         } else if (speed.getMph() >= 100) {
-            ticket = true;
+            getTicket = true;
             ticketcost = 300;
             System.out.println("This ticket will cost $" + ticketcost + ".");
 
         } else {
-            ticket = false;
+            getTicket = false;
             ticketcost = 0;
             System.out.println("You don't need a ticket so you have to pay $" + ticketcost + ". Nice!");
         }
